@@ -1,8 +1,8 @@
 <?php
-if(isset($_POST['email'])) {
+if(isset($_POST['submit'])) {
  
     // EDIT THE 2 LINES BELOW AS REQUIRED
-    $email_to = "powtoontestacc@gmail.com";
+    $email_to = "qiang.chew@i2sbs.com";
     $email_subject = "Booking for events";
  
     function died($error) {
@@ -80,14 +80,7 @@ if(isset($_POST['email'])) {
 $headers = 'From: '.$email_from."\r\n".
 'Reply-To: '.$email_from."\r\n" .
 'X-Mailer: PHP/' . phpversion();
-@mail($email_to, $email_subject, $email_message, $headers); 
+mail($email_to, $email_subject, $email_message, $headers); 
 ?>
  
 <!-- include your own success html here -->
- 
-Thank you for contacting us. We will be in touch with you very soon.
- 
-<?php
- 
-}
-?>
